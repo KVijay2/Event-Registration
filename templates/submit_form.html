@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>Submit Project for {{event.name}}</h1>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit"/>
+        </form>
+    </div>
+{% endblock content %}
